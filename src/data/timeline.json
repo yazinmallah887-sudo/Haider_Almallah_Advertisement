@@ -1,0 +1,471 @@
+{
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "durationInFrames": 2692,
+  "scenes": [
+    {
+      "id": "opening",
+      "from": 0,
+      "duration": 145,
+      "label": "المشهد الأول – الافتتاحية"
+    },
+    {
+      "id": "teacher",
+      "from": 145,
+      "duration": 223,
+      "label": "المشهد الأول – انطلاق التسجيل / تقديم الأستاذ"
+    },
+    {
+      "id": "location",
+      "from": 368,
+      "duration": 159,
+      "label": "المشهد الثاني – مكان التدريس"
+    },
+    {
+      "id": "promise",
+      "from": 527,
+      "duration": 163,
+      "label": "المشهد الثالث – مقدمة المميزات"
+    },
+    {
+      "id": "f1",
+      "from": 690,
+      "duration": 155,
+      "label": "الميزة 1 – شرح مفصل للمادة"
+    },
+    {
+      "id": "f2",
+      "from": 845,
+      "duration": 174,
+      "label": "الميزة 2 – امتحانات مستمرة"
+    },
+    {
+      "id": "f3",
+      "from": 1019,
+      "duration": 198,
+      "label": "الميزة 3 – نظام إلكتروني دقيق"
+    },
+    {
+      "id": "f4",
+      "from": 1217,
+      "duration": 209,
+      "label": "الميزة 4 – تواصل مباشر مع ولي الأمر"
+    },
+    {
+      "id": "f5",
+      "from": 1426,
+      "duration": 246,
+      "label": "الميزة 5 – متابعة حتى الامتحان الوزاري"
+    },
+    {
+      "id": "contact",
+      "from": 1672,
+      "duration": 411,
+      "label": "المشهد الرابع – معلومات التسجيل"
+    },
+    {
+      "id": "closing",
+      "from": 2083,
+      "duration": 609,
+      "label": "المشهد الخامس – الخاتمة"
+    }
+  ],
+  "voiceOver": [
+    {
+      "id": "v01",
+      "from": 6,
+      "to": 64,
+      "text": "طلابنا وطالباتنا الأعزاء،",
+      "voiced": "طلابنا وطالباتنا الأعزاء،",
+      "emphasis": [
+        "الأعزاء"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 6,
+      "audioTo": 73
+    },
+    {
+      "id": "v02",
+      "from": 70,
+      "to": 137,
+      "text": "",
+      "voiced": "",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": true
+    },
+    {
+      "id": "v03",
+      "from": 155,
+      "to": 356,
+      "text": "انطلق التسجيل بالدورات الصيفية للعام الدراسي 2027-2028، ويّا الأستاذ حيدر الملاح،",
+      "voiced": "انطلق التسجيل بالدورات الصيفية، للعام الدراسي ألفين وسبعة وعشرين، ألفين وثمانية وعشرين، ويّا الأستاذ حيدر الملّاح،",
+      "emphasis": [
+        "حيدر الملاح"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 148,
+      "audioTo": 371
+    },
+    {
+      "id": "v04",
+      "from": 380,
+      "to": 517,
+      "text": "بالجانب الأيسر حصراً، بمعهد المتميزين الكائن بحي الحدباء.",
+      "voiced": "بالجانب الأيسر حصراً، بمعهد المتميّزين، الكائن بحي الحدباء.",
+      "emphasis": [
+        "الجانب الأيسر حصراً",
+        "معهد المتميزين"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 376,
+      "audioTo": 537
+    },
+    {
+      "id": "v05",
+      "from": 537,
+      "to": 682,
+      "text": "ويّانا راح تحصلون على",
+      "voiced": "ويّانا راح تحصلون على",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 542,
+      "audioTo": 596
+    },
+    {
+      "id": "v06",
+      "from": 701,
+      "to": 838,
+      "text": "شرح مفصل للمادة،",
+      "voiced": "شرح مفصّل للمادة،",
+      "emphasis": [
+        "شرح مفصل للمادة"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 701,
+      "audioTo": 734
+    },
+    {
+      "id": "v07",
+      "from": 856,
+      "to": 1012,
+      "text": "وامتحانات يومية وأسبوعية وشاملة لكل وحدة.",
+      "voiced": "وامتحانات يومية، وأسبوعية، وشاملة لكل وحدة.",
+      "emphasis": [
+        "امتحانات"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 848,
+      "audioTo": 1017
+    },
+    {
+      "id": "v08",
+      "from": 1030,
+      "to": 1210,
+      "text": "ونظام إلكتروني دقيق يتابع حضوركم ودرجاتكم،",
+      "voiced": "ونظام إلكتروني دقيق، يتابع حضوركم ودرجاتكم،",
+      "emphasis": [
+        "نظام إلكتروني دقيق"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 1030,
+      "audioTo": 1161
+    },
+    {
+      "id": "v09",
+      "from": 1228,
+      "to": 1419,
+      "text": "مع تواصل مباشر ومستمر ويّا أولياء الأمور.",
+      "voiced": "مع تواصل مباشر ومستمر، ويّا أولياء الأمور.",
+      "emphasis": [
+        "تواصل مباشر"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 1228,
+      "audioTo": 1337
+    },
+    {
+      "id": "v10",
+      "from": 1437,
+      "to": 1665,
+      "text": "ومراجعة مفصلة ومتابعة مستمرة للطالب، من بداية الدورة ولحد قاعة الامتحان.",
+      "voiced": "ومراجعة مفصّلة، ومتابعة مستمرة للطالب، من بداية الدورة، ولحدّ قاعة الامتحان.",
+      "emphasis": [
+        "قاعة الامتحان"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 1437,
+      "audioTo": 1625
+    },
+    {
+      "id": "v11",
+      "from": 1682,
+      "to": 1835,
+      "text": "للاستفسار اتصلوا على الرقم:",
+      "voiced": "للاستفسار، اتصلوا على الرقم:",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 1682,
+      "audioTo": 1789
+    },
+    {
+      "id": "v12",
+      "from": 1843,
+      "to": 1994,
+      "text": "0773 822 3960",
+      "voiced": "صفر سبعة سبعة ثلاثة، ثمانية اثنين اثنين، ثلاثة تسعة ستة صفر.",
+      "emphasis": [
+        "0773 822 3960"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 1843,
+      "audioTo": 1999
+    },
+    {
+      "id": "v13",
+      "from": 2002,
+      "to": 2071,
+      "text": "أو زوروا معهد المتميزين وسجلوا هسه.",
+      "voiced": "أو زوروا معهد المتميّزين، وسجّلوا هسّه.",
+      "emphasis": [
+        "معهد المتميزين"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 2004,
+      "audioTo": 2090
+    },
+    {
+      "id": "v14",
+      "from": 2091,
+      "to": 2130,
+      "text": "",
+      "voiced": "",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": true
+    },
+    {
+      "id": "v15",
+      "from": 2138,
+      "to": 2336,
+      "text": "",
+      "voiced": "",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": true
+    },
+    {
+      "id": "v16",
+      "from": 2344,
+      "to": 2384,
+      "text": "احجز مقعدك الآن،",
+      "voiced": "احجز مقعدك الآن،",
+      "emphasis": [
+        "احجز مقعدك الآن"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 2344,
+      "audioTo": 2393
+    },
+    {
+      "id": "v17",
+      "from": 2392,
+      "to": 2444,
+      "text": "وخلي حلم الدرجة الكاملة بالوزاري يصير حقيقة!",
+      "voiced": "وخلّي حلم الدرجة الكاملة بالوزاري، يصير حقيقة!",
+      "emphasis": [
+        "الدرجة الكاملة"
+      ],
+      "durationSource": "final",
+      "silent": false,
+      "audioFrom": 2398,
+      "audioTo": 2498
+    },
+    {
+      "id": "v18",
+      "from": 2452,
+      "to": 2647,
+      "text": "",
+      "voiced": "",
+      "emphasis": [],
+      "durationSource": "final",
+      "silent": true
+    }
+  ],
+  "sfx": [
+    {
+      "file": "impact.wav",
+      "at": 0,
+      "volume": 0.9
+    },
+    {
+      "file": "shimmer.wav",
+      "at": 10,
+      "volume": 0.5
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 135,
+      "volume": 0.65
+    },
+    {
+      "file": "hit.wav",
+      "at": 159,
+      "volume": 0.7
+    },
+    {
+      "file": "shimmer.wav",
+      "at": 215,
+      "volume": 0.45
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 358,
+      "volume": 0.65
+    },
+    {
+      "file": "pop.wav",
+      "at": 386,
+      "volume": 0.6
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 517,
+      "volume": 0.65
+    },
+    {
+      "file": "hit.wav",
+      "at": 533,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 680,
+      "volume": 0.65
+    },
+    {
+      "file": "ding.wav",
+      "at": 702,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 835,
+      "volume": 0.65
+    },
+    {
+      "file": "ding.wav",
+      "at": 857,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 1009,
+      "volume": 0.65
+    },
+    {
+      "file": "ding.wav",
+      "at": 1031,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 1207,
+      "volume": 0.65
+    },
+    {
+      "file": "ding.wav",
+      "at": 1229,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 1416,
+      "volume": 0.65
+    },
+    {
+      "file": "ding.wav",
+      "at": 1438,
+      "volume": 0.55
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 1662,
+      "volume": 0.65
+    },
+    {
+      "file": "hit.wav",
+      "at": 1680,
+      "volume": 0.5
+    },
+    {
+      "file": "tick.wav",
+      "at": 1843,
+      "volume": 0.55
+    },
+    {
+      "file": "tick.wav",
+      "at": 1893,
+      "volume": 0.55
+    },
+    {
+      "file": "tick.wav",
+      "at": 1943,
+      "volume": 0.55
+    },
+    {
+      "file": "hit.wav",
+      "at": 1990,
+      "volume": 0.6
+    },
+    {
+      "file": "riser.wav",
+      "at": 2005,
+      "volume": 0.7
+    },
+    {
+      "file": "whoosh.wav",
+      "at": 2073,
+      "volume": 0.65
+    },
+    {
+      "file": "impact.wav",
+      "at": 2083,
+      "volume": 1.0
+    },
+    {
+      "file": "hit.wav",
+      "at": 2342,
+      "volume": 0.75
+    },
+    {
+      "file": "riser.wav",
+      "at": 2374,
+      "volume": 0.4
+    },
+    {
+      "file": "impact.wav",
+      "at": 2448,
+      "volume": 1.0
+    },
+    {
+      "file": "shimmer.wav",
+      "at": 2452,
+      "volume": 0.6
+    }
+  ]
+}

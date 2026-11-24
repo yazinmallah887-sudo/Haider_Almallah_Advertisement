@@ -1,0 +1,36 @@
+{
+  "name": "haider-almallah-summer-ad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinematic 9:16 Remotion advertisement – Haider Almallah Summer Courses 2027–2028",
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "audio": "python3 scripts/generate_audio.py",
+    "guide-vo": "python3 scripts/generate_guide_vo.py",
+    "render": "remotion render HaiderSummerAd out/haider-almallah-summer-2027-2028.mp4 --codec=h264 --crf=18 --props=props/final.json",
+    "render:guide": "remotion render HaiderSummerAd out/haider-almallah-summer-guide-vo.mp4 --codec=h264 --crf=20 --props=props/guide.json",
+    "render:final": "remotion render HaiderSummerAd out/haider-almallah-summer-final.mp4 --codec=h264 --crf=18 --props=props/final.json",
+    "render:mobile": "remotion render HaiderSummerAd out/haider-almallah-summer-mobile.mp4 --codec=h264 --crf=28 --scale=0.5",
+    "still": "remotion still HaiderSummerAd out/poster.png --frame=2140",
+    "typecheck": "tsc --noEmit",
+    "retime": "python3 scripts/build_timeline.py && python3 scripts/generate_audio.py && python3 scripts/export_srt.py",
+    "srt": "python3 scripts/export_srt.py",
+    "images": "python3 scripts/prepare_images.py assets/source/logo-original.png assets/source/teacher-original.jpg",
+    "vo": "python3 scripts/generate_neural_vo.py",
+    "render:music-only": "remotion render HaiderSummerAd out/haider-almallah-summer-music-only.mp4 --codec=h264 --crf=20 --props=props/no-vo.json"
+  },
+  "dependencies": {
+    "@fontsource/cairo": "^5.3.0",
+    "@fontsource/reem-kufi": "^5.3.0",
+    "@remotion/cli": "^4.0.547",
+    "@remotion/media-utils": "^4.0.547",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.547"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "typescript": "^7.0.2"
+  }
+}
