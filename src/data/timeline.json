@@ -84,7 +84,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 6,
-      "audioTo": 62
+      "audioTo": 73
     },
     {
       "id": "v02",
@@ -107,8 +107,8 @@
       ],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 155,
-      "audioTo": 374
+      "audioFrom": 148,
+      "audioTo": 371
     },
     {
       "id": "v04",
@@ -122,8 +122,8 @@
       ],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 380,
-      "audioTo": 520
+      "audioFrom": 376,
+      "audioTo": 537
     },
     {
       "id": "v05",
@@ -134,8 +134,8 @@
       "emphasis": [],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 537,
-      "audioTo": 582
+      "audioFrom": 542,
+      "audioTo": 596
     },
     {
       "id": "v06",
@@ -149,7 +149,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 701,
-      "audioTo": 745
+      "audioTo": 734
     },
     {
       "id": "v07",
@@ -162,8 +162,8 @@
       ],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 856,
-      "audioTo": 974
+      "audioFrom": 848,
+      "audioTo": 1017
     },
     {
       "id": "v08",
@@ -177,7 +177,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 1030,
-      "audioTo": 1144
+      "audioTo": 1161
     },
     {
       "id": "v09",
@@ -191,7 +191,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 1228,
-      "audioTo": 1328
+      "audioTo": 1337
     },
     {
       "id": "v10",
@@ -205,7 +205,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 1437,
-      "audioTo": 1626
+      "audioTo": 1625
     },
     {
       "id": "v11",
@@ -217,7 +217,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 1682,
-      "audioTo": 1745
+      "audioTo": 1789
     },
     {
       "id": "v12",
@@ -231,7 +231,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 1843,
-      "audioTo": 1992
+      "audioTo": 1999
     },
     {
       "id": "v13",
@@ -244,8 +244,8 @@
       ],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 2002,
-      "audioTo": 2080
+      "audioFrom": 2004,
+      "audioTo": 2090
     },
     {
       "id": "v14",
@@ -279,7 +279,7 @@
       "durationSource": "final",
       "silent": false,
       "audioFrom": 2344,
-      "audioTo": 2383
+      "audioTo": 2393
     },
     {
       "id": "v17",
@@ -292,8 +292,8 @@
       ],
       "durationSource": "final",
       "silent": false,
-      "audioFrom": 2392,
-      "audioTo": 2494
+      "audioFrom": 2398,
+      "audioTo": 2498
     },
     {
       "id": "v18",
