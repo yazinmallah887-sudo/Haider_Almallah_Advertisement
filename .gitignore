@@ -1,0 +1,6 @@
+node_modules/
+out/*.mp4
+!out/haider-almallah-summer-2027-2028.mp4
+!out/haider-almallah-summer-guide-vo.mp4
+.DS_Store
+*.log
