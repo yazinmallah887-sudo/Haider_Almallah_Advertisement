@@ -31,17 +31,14 @@ OUT = os.path.join(ROOT, "public", "audio", "vo", "final")
 os.makedirs(OUT, exist_ok=True)
 
 VOICE = os.environ.get("VO_VOICE", "ar-IQ-BasselNeural")
-RATE = os.environ.get("VO_RATE", "+25%")
+RATE = os.environ.get("VO_RATE", "+12%")
 PITCH = os.environ.get("VO_PITCH", "-5Hz")
+# Accent guard: only Iraqi-locale voices are allowed for this ad (never Egyptian / Gulf).
+if not VOICE.startswith("ar-IQ-"):
+    raise SystemExit(f"Refusing non-Iraqi voice {VOICE}: this ad requires an ar-IQ voice")
 
-# Spoken forms where the on-screen text contains digits (years / phone number).
-SPOKEN = {
-    "v03": "انطلاق التسجيل للدورات الصيفية، ألفين وسبعة وعشرين، ألفين وثمانية وعشرين، للأستاذ حيدر الملاح.",
-    "v12": "صفر سبعة سبعة ثلاثة، ثمانية اثنين اثنين، ثلاثة تسعة ستة صفر.",
-    "v18": "الأستاذ حيدر الملاح، الدورات الصيفية، ألفين وسبعة وعشرين، ألفين وثمانية وعشرين.",
-}
-# Per-line delivery: phone number slower and clearer, closing CTA a touch more energetic.
-LINE_RATE = {"v12": "+0%", "v14": "+10%", "v16": "+10%", "v18": "+12%"}
+# Spoken text comes from timeline.json "voiced" (Iraqi dialect narration, digits written as words).
+LINE_RATE = {"v12": "+0%"}  # phone number slower and clearer
 
 # Voice chain: rumble cut, warmth/body, presence, gentle compression, tight silence trim, loudness.
 CHAIN = (
@@ -60,7 +57,13 @@ async def synth(text, path, rate):
 
 async def main():
     for v in TL["voiceOver"]:
-        text = SPOKEN.get(v["id"], v["text"])
+        dst = os.path.join(OUT, f"{v['id']}.wav")
+        if v.get("silent"):
+            if os.path.exists(dst):
+                os.remove(dst)
+            print(f"{v['id']}: (silent visual beat)")
+            continue
+        text = v["voiced"]
         with tempfile.TemporaryDirectory() as td:
             mp3 = os.path.join(td, "l.mp3")
             for attempt in range(4):
@@ -72,7 +75,6 @@ async def main():
                         raise
                     print("retry", v["id"], e)
                     await asyncio.sleep(2 * (attempt + 1))
-            dst = os.path.join(OUT, f"{v['id']}.wav")
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-af", CHAIN, "-ar", "48000", "-ac", "2", dst], check=True)
         d = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst],
                                  capture_output=True, text=True).stdout)

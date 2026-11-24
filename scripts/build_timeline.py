@@ -50,6 +50,14 @@ def probe(path):
 
 
 def vo_seconds(vid):
+    seg = VO[vid]
+    if seg.get("silent"):
+        return seg.get("minSec", 1.0), "silent"
+    sec, src = _vo_seconds(vid)
+    return max(sec, seg.get("minSec", 0)), src
+
+
+def _vo_seconds(vid):
     for ext in ("wav", "mp3", "m4a"):
         p = os.path.join(ROOT, "public", "audio", "vo", "final", f"{vid}.{ext}")
         if os.path.exists(p):

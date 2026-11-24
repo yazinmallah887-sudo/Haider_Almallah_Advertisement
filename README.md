@@ -1,13 +1,12 @@
 # إعلان الدورات الصيفية 2027–2028 — الأستاذ حيدر الملاح
 
-A cinematic motion-graphics ad built with **React + Remotion**: 9:16, 1080×1920, 30 fps, 89.7 s (within the 90 s Reels limit).
+A cinematic motion-graphics ad built with **React + Remotion**: 9:16, 1080×1920, 30 fps, 89.7 s.
 The colours are royal navy, metallic gold and white, with Arabic RTL kinetic typography, 3D gold
 type, animated 3D icon medallions, particles with depth of field, light streaks, god rays,
 parallax camera moves, synced captions, an original procedural score and sound effects.
 
-> **Voice-over:** Iraqi Arabic male neural voice **ar-IQ-BasselNeural** (Microsoft), the full script
-> with no omissions. The music and SFX duck by about 13 dB under every line.
-> Why about 90 s and not 60 s? The complete script (about 175 words) read at an energetic ad pace takes about 85 s.
+> **Voice-over:** Iraqi-dialect narration (see docs/VOICE_OVER.md) voiced by the Iraqi-locale male neural voice
+> **ar-IQ-BasselNeural** (Microsoft). The music and SFX duck by about 13 dB under every line.
 
 ---
 

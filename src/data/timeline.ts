@@ -5,7 +5,11 @@ export type SceneId =
   | 'f1' | 'f2' | 'f3' | 'f4' | 'f5' | 'contact' | 'closing';
 
 export type SceneDef = {id: SceneId; from: number; duration: number; label: string};
-export type VoSegment = {id: string; from: number; to: number; text: string; voiced: string; emphasis: string[]};
+export type VoSegment = {id: string; from: number; to: number; text: string; voiced: string; emphasis: string[]; silent?: boolean; audioFrom?: number; audioTo?: number};
+
+/** Where the narration audio (and its caption) actually plays. `from`/`to` stay the visual animation anchors. */
+export const audioRange = (v: VoSegment) => ({from: v.audioFrom ?? v.from, to: v.audioTo ?? v.to});
+
 export type SfxCue = {file: string; at: number; volume: number};
 
 export const TIMELINE = raw as unknown as {
@@ -17,6 +21,9 @@ export const TIMELINE = raw as unknown as {
   voiceOver: VoSegment[];
   sfx: SfxCue[];
 };
+
+/** Narrated (non-silent) voice-over lines. */
+export const spokenLines = () => TIMELINE.voiceOver.filter((v) => !v.silent && v.text);
 
 export const scene = (id: SceneId): SceneDef => {
   const s = TIMELINE.scenes.find((x) => x.id === id);

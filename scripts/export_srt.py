@@ -18,9 +18,9 @@ def ts(frame):
 
 os.makedirs(os.path.join(ROOT, "out"), exist_ok=True)
 lines = []
-for i, v in enumerate(TL["voiceOver"], 1):
-    text = v["text"].replace("2027–2028", "⁦2027–2028⁩").replace("0773 822 3960", "⁦0773 822 3960⁩")
-    lines.append(f"{i}\n{ts(v['from'])} --> {ts(v['to'])}\n‫{text}‬\n")
+for i, v in enumerate([x for x in TL["voiceOver"] if not x.get("silent")], 1):
+    text = v["text"].replace("2027-2028", "⁦2027-2028⁩").replace("0773 822 3960", "⁦0773 822 3960⁩")
+    lines.append(f"{i}\n{ts(v.get('audioFrom', v['from']))} --> {ts(v.get('audioTo', v['to']))}\n‫{text}‬\n")
 path = os.path.join(ROOT, "out", "subtitles-ar.srt")
 open(path, "w", encoding="utf-8").write("\n".join(lines))
 print("written", path)

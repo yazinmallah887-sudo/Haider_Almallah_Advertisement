@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {NO_CAPTION, TIMELINE} from '../data/timeline';
+import {NO_CAPTION, audioRange, spokenLines} from '../data/timeline';
 import {C, FONT_BODY} from '../theme';
 import {tween} from './motion';
 import {withLtrNumbers} from './Typography';
@@ -12,7 +12,7 @@ type Chunk = {words: string[]; from: number; to: number; wordTimes: number[]};
 /** Split each VO line into short caption chunks with per-word timing (proportional to length). */
 const buildChunks = (): Chunk[] => {
   const out: Chunk[] = [];
-  for (const v of TIMELINE.voiceOver) {
+  for (const v of spokenLines()) {
     if (NO_CAPTION.has(v.id)) continue;
     const words = v.text.split(/\s+/).filter(Boolean);
     // prefer breaking after punctuation
@@ -33,8 +33,9 @@ const buildChunks = (): Chunk[] => {
     }
     const weight = (w: string) => w.replace(/[^؀-ۿ0-9]/g, '').length + 2;
     const total = words.reduce((a, w) => a + weight(w), 0);
-    const span = v.to - v.from;
-    let t = v.from;
+    const r = audioRange(v);
+    const span = r.to - r.from;
+    let t = r.from;
     for (const g of groups) {
       const gw = g.reduce((a, w) => a + weight(w), 0);
       const len = (gw / total) * span;

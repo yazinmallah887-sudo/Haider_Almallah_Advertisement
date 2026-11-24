@@ -28,6 +28,8 @@ def duration(path):
 
 
 for seg in TL["voiceOver"]:
+    if seg.get("silent"):
+        continue
     slot = (seg["to"] - seg["from"]) / FPS
     with tempfile.TemporaryDirectory() as td:
         raw = os.path.join(td, "raw.wav")

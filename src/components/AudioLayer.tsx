@@ -1,6 +1,6 @@
 import React from 'react';
 import {Audio, Sequence, interpolate, staticFile} from 'remotion';
-import {TIMELINE} from '../data/timeline';
+import {TIMELINE, audioRange, spokenLines} from '../data/timeline';
 
 export type VoiceOverMode = 'none' | 'guide' | 'final';
 
@@ -9,8 +9,9 @@ const musicVolume = (frame: number, duck: boolean) => {
   const base = 0.85;
   if (!duck) return base;
   let d = 0;
-  for (const v of TIMELINE.voiceOver) {
-    const a = interpolate(frame, [v.from - 8, v.from, v.to, v.to + 10], [0, 1, 1, 0], {
+  for (const v of spokenLines()) {
+    const r = audioRange(v);
+    const a = interpolate(frame, [r.from - 8, r.from, r.to, r.to + 10], [0, 1, 1, 0], {
       extrapolateLeft: 'clamp',
       extrapolateRight: 'clamp',
     });
@@ -36,8 +37,8 @@ export const AudioLayer: React.FC<{voiceOver: VoiceOverMode; voExt?: string; mus
           </Sequence>
         ))}
       {voiceOver !== 'none' &&
-        TIMELINE.voiceOver.map((v) => (
-          <Sequence key={v.id} from={v.from} layout="none" name={`VO ${v.id}`}>
+        spokenLines().map((v) => (
+          <Sequence key={v.id} from={audioRange(v).from} layout="none" name={`VO ${v.id}`}>
             <Audio
               src={staticFile(voiceOver === 'guide' ? `audio/vo/guide/${v.id}.wav` : `audio/vo/final/${v.id}.${voExt}`)}
               volume={1}
