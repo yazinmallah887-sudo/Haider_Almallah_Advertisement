@@ -1,13 +1,13 @@
 # إعلان الدورات الصيفية 2027–2028 — الأستاذ حيدر الملاح
 
-A cinematic motion-graphics ad built with **React + Remotion**: 9:16, 1080×1920, 30 fps, about 72 s.
+A cinematic motion-graphics ad built with **React + Remotion**: 9:16, 1080×1920, 30 fps, 89.7 s (within the 90 s Reels limit).
 The colours are royal navy, metallic gold and white, with Arabic RTL kinetic typography, 3D gold
 type, animated 3D icon medallions, particles with depth of field, light streaks, god rays,
 parallax camera moves, synced captions, an original procedural score and sound effects.
 
-> Why about 72 s and not 60 s? The full script (about 175 words) is used **without cutting any
-> sentence or information**. At an energetic but clear ad read that needs about 70 s. See
-> "60-second cut" below.
+> **Voice-over:** Iraqi Arabic male neural voice **ar-IQ-BasselNeural** (Microsoft), the full script
+> with no omissions. The music and SFX duck by about 13 dB under every line.
+> Why about 90 s and not 60 s? The complete script (about 175 words) read at an energetic ad pace takes about 85 s.
 
 ---
 
@@ -16,7 +16,10 @@ parallax camera moves, synced captions, an original procedural score and sound e
 ```bash
 npm install
 npm run dev            # Remotion Studio → http://localhost:3000 (live preview, scrub, edit)
-npm run render         # → out/haider-almallah-summer-2027-2028.mp4  (music + SFX + captions)
+npm run vo             # (re)generate the Arabic neural voice-over (needs access to speech.platform.bing.com)
+npm run retime         # re-time scenes/music/subtitles to the voice-over
+npm run render         # → out/haider-almallah-summer-2027-2028.mp4  (voice-over + music + SFX + captions)
+npm run render:music-only
 npm run render:guide   # same, with the scratch guide voice-over
 npm run render:final   # same, with YOUR real voice-over (public/audio/vo/final/v01..v18.wav)
 npm run render:mobile  # 540×960 light preview for phones / WhatsApp
@@ -107,7 +110,7 @@ The music automatically ducks by about 10 dB under every line.
 |---|---|
 | Full animation, typography, 3D elements, transitions, captions | ✅ done in code, renders to MP4 |
 | Music bed & SFX | ✅ original, generated in code (replace with a licensed library track of the same file name for an even bigger sound) |
-| Professional Arabic male VO | ⚠️ needs a **voice artist** or a premium neural TTS (ElevenLabs / Azure). A guide VO is included for timing; the pipeline is ready (`npm run retime && npm run render:final`) |
+| Professional Arabic male VO | ✅ ar-IQ-BasselNeural (Iraqi male neural voice) via `scripts/generate_neural_vo.py`, voice-processed (EQ, compression, −16 LUFS) and mixed with ducking. A human voice artist can replace it: drop `v01..v18.wav` in `public/audio/vo/final/` and run `npm run retime && npm run render` |
 | Background removal of the teacher photo | Optional: for a cut-out (no backdrop) portrait, export a transparent PNG (remove.bg / Photoshop) as `public/images/teacher.png` and point `Teacher.tsx` to it |
 
 ## 60-second cut (optional)

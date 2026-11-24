@@ -16,7 +16,7 @@ const musicVolume = (frame: number, duck: boolean) => {
     });
     d = Math.max(d, a);
   }
-  return base * (1 - d * 0.68); // ≈ -10 dB under the voice
+  return base * (1 - d * 0.88); // ≈ -18 dB under the voice
 };
 
 export const AudioLayer: React.FC<{voiceOver: VoiceOverMode; voExt?: string; music?: boolean; sfx?: boolean}> = ({
@@ -32,7 +32,7 @@ export const AudioLayer: React.FC<{voiceOver: VoiceOverMode; voExt?: string; mus
       {sfx &&
         TIMELINE.sfx.map((c, i) => (
           <Sequence key={`sfx-${i}`} from={c.at} layout="none" name={`SFX ${c.file}`}>
-            <Audio src={staticFile(`audio/sfx/${c.file}`)} volume={c.volume * (duck ? 0.75 : 1)} />
+            <Audio src={staticFile(`audio/sfx/${c.file}`)} volume={c.volume * (duck ? 0.55 : 1)} />
           </Sequence>
         ))}
       {voiceOver !== 'none' &&

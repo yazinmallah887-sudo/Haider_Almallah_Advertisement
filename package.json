@@ -8,7 +8,7 @@
     "studio": "remotion studio",
     "audio": "python3 scripts/generate_audio.py",
     "guide-vo": "python3 scripts/generate_guide_vo.py",
-    "render": "remotion render HaiderSummerAd out/haider-almallah-summer-2027-2028.mp4 --codec=h264 --crf=20",
+    "render": "remotion render HaiderSummerAd out/haider-almallah-summer-2027-2028.mp4 --codec=h264 --crf=18 --props=props/final.json",
     "render:guide": "remotion render HaiderSummerAd out/haider-almallah-summer-guide-vo.mp4 --codec=h264 --crf=20 --props=props/guide.json",
     "render:final": "remotion render HaiderSummerAd out/haider-almallah-summer-final.mp4 --codec=h264 --crf=18 --props=props/final.json",
     "render:mobile": "remotion render HaiderSummerAd out/haider-almallah-summer-mobile.mp4 --codec=h264 --crf=28 --scale=0.5",
@@ -16,7 +16,9 @@
     "typecheck": "tsc --noEmit",
     "retime": "python3 scripts/build_timeline.py && python3 scripts/generate_audio.py && python3 scripts/export_srt.py",
     "srt": "python3 scripts/export_srt.py",
-    "images": "python3 scripts/prepare_images.py assets/source/logo-original.png assets/source/teacher-original.jpg"
+    "images": "python3 scripts/prepare_images.py assets/source/logo-original.png assets/source/teacher-original.jpg",
+    "vo": "python3 scripts/generate_neural_vo.py",
+    "render:music-only": "remotion render HaiderSummerAd out/haider-almallah-summer-music-only.mp4 --codec=h264 --crf=20 --props=props/no-vo.json"
   },
   "dependencies": {
     "@fontsource/cairo": "^5.3.0",
